@@ -18,6 +18,6 @@ public class AuthenticationService {
     public boolean login(String email, String password) {
         User user = userService.findByEmail(email);
 
-        return email != null && user != null && user.getPassword().equals(password);
+        return user != null && user.getPassword().equals(password);
     }
 }
